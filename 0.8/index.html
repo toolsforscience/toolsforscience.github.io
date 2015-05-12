@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<!-- Article Locator ver. 0.8-->
+	<!-- Copyright (C) 2011-12 Hiroyuki Kai All Rights Reserved. The program on this website is distributed under BSD license.-->
+
+	<head>
+		<meta charset='utf-8' />
+		<title>Article Locator for Chemistry</title>
+<meta name="description" content="Article Locator finds online journal articles by a citation. It supports more than 1,000 journals.">
+<meta name="keywords" content="article search,citation">
+		
+		<link rel="stylesheet" type="text/css" href="./style.css" />
+		<script type="text/javascript" src="./js/common.js"></script>
+		<script type="text/javascript" src="./js/ui.js"></script>
+		<script type="text/javascript" src="./js/suggest.js"></script>
+		<script type="text/javascript" src="./js/main.js"></script>
+		
+		<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+		
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22288705-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	 </head>
+
+	 <body onload='initial()' onkeydown='keyDown(event)' onkeyup='keyUp(event)'>
+		 <div id='toprightmenu'><p><a href='/0.71/index.html' tabindex='-1'>Old version</a></p><p class='header'><a href='./alltitles.html' tabindex='-1'>Supported Journals</a>&nbsp;/&nbsp;<a href='./help.html' tabindex='-1'>Help</a><!-- &nbsp;/&nbsp; <a href='javascript:showTutorial(false);'>Quick Guide</a> --> </p></div>
+
+		 <div id='lefttop'>
+			 <div class='logo'><img src='img/logo.png' width='120' height='120' class='logo'/></div>
+			 <div id='titlecontainer'>
+				 <div class='title'><nobr>Article</nobr><br/><nobr>Locator</nobr></div>
+				 <div class='subtitle'><nobr>for Chemistry</nobr></div>
+			 </div>
+
+		 </div>
+		 <div class='dummy'></div>
+
+		 <div id='container3'>
+			 <div id='textsearch' class='clicked' onclick='divClicked("textsearch")'>
+				 <h2>Citation Text</h2>
+				 <div style='margin: 0em 3em 0em 0em'>
+					 <input type="text" id="freeword" tabindex='1' onfocus='divClicked("textsearch")' onkeydown='if (event.keyCode == 13 && document.activeElement.id=="freeword"){goFreeWord();}'/><br />
+					 <div style='float:right; margin: 0.5em 0em 0em 0em;text-align:center;'>
+						 <input type="button" src='img/gobutton.gif' id='gobutton' class='noshift' tabindex='-1'  value="Go" onclick="if(event.shiftKey) parseFreeWord(); else goFreeWord();" /><br/>
+						 <div id='keyguide'>
+							 Shift key: Only parsing<br/>&#x2318; / Ctrl: New tab
+						 </div>
+					 </div>
+				 </div>
+				 <div id='example'>e.g.)
+					 <p style='margin:0.3em'>Phys. Rev. Lett. 53, 1951-1953 (1984)</p>
+					 <p style='margin:0.3em'>Nature 317, 512 - 514</p>
+				 </div>
+				 <div id="out_parse_info">&nbsp;<br /></div>
+			 </div>  <!--  id='textsearch' -->
+
+			 <div id='autofillsearch' onclick='divClicked("autofillsearch")'>
+				 <form onsubmit="return false;" action=''>
+					 <h2>Input Using Suggestion</h2>
+					 <div style='margin: 0.8em 3em 0em 0em'>
+						 <div><span class='shadow'>Journal:</span>
+							 <!-- Input form -->
+							 <input id="suggesttext" type="text" name="pattern" tabindex='2' value="" autocomplete="off" style="display: block" onfocus='divClicked("autofillsearch")' onkeydown='if (event.keyCode == 13 && document.activeElement.id=="suggesttext"){goFreeWord();}'/>
+							 <!-- Area to show suggestion -->
+							 <div id="suggest"></div>
+						 </div>
+						 <p>
+						 <span class='shadow' style='display:inline-block;'>Volume: &nbsp;<input type="text" id="suggestvol" tabindex='3'  onkeydown='if (event.keyCode == 13 && document.activeElement.id=="suggestvol"){goFreeWord();}'/>&nbsp; &nbsp; </span>
+						 <span class='shadow' style='display:inline-block;'>Page: &nbsp;<input type="text" id="suggestpage" tabindex='4'  onkeydown='if (event.keyCode == 13 && document.activeElement.id=="suggestpage"){goFreeWord();}'/></span>
+						 <span style='float:right'><input type="button" src='img/gobutton.gif' value='Go' tabindex='-1' id="suggestgo" onclick="jumpToCitation()"/></span>
+						 </p>
+					 </div>
+					 <div id="out_info">&nbsp;<br /></div>
+				 </form>
+			 </div>  <!--  id='autofillsearch' -->
+		 </div> <!-- #container3 -->
+
+		 <div id='socialbookmarks' style="text-align:center; margin: 1em;display:block;">
+			 <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://goo.gl/Geqyq" data-text="Article Locator for Chemistry" data-count="horizontal" data-via="articlelocator">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script><br/>
+			 <iframe src="http://www.facebook.com/plugins/like.php?app_id=216169511746572&amp;href=http%3A%2F%2Flocator.web.fc2.com%2Findex.html&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:30px;" allowTransparency="true"></iframe><br/>
+			 <g:plusone size="small" annotation="inline" width="120"></g:plusone>
+		 </div><br />
+
+
+		 <div id='fc2counter' style='text-align:center; margin: 0em 0em 1em 0em;display:block;'>
+			 <!-- FC2 counter begin-->
+			 <script language="JavaScript" type="text/javascript" src="http://counter1.fc2.com/counter.php?id=8415996"></script><noscript><img src="http://counter1.fc2.com/counter_img.php?id=8415996"></noscript>
+			 <!-- FC2 counter end-->
+		 </div>
+
+		 <script type="text/javascript" src="./js/pubs.js"></script>
+	 </body>
+
+ </html>
+

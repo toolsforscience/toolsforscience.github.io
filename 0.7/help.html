@@ -1,0 +1,222 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<!-- Article Locator ver. 0.7-->
+<!-- Copyright (C) 2011 L.P. All Rights Reserved. The program on this website is distributed under BSD license.-->
+
+<head>
+<meta charset="utf-8">
+<title>Help - Article Locator</title>
+<style type='text/css'>
+body {
+	margin: 20px auto;
+	width:800px;
+	font-family: sans-serif;
+	background-color: #f7fff7;
+}
+
+header, footer {
+    border:1px solid #ccc;
+   margin:0px;
+	padding:20px;
+border-radius: 4px;
+}
+
+section{
+    border:1px solid #ccc;
+   margin:0px;
+	padding:20px;
+border-radius: 8px;
+}
+
+
+header{
+	width: 800px;
+	background: #d1ffd1;
+}
+
+nav {
+//	border:1px solid #ccc;
+	width: 800px;
+	height: 40px;
+	padding:10px 0px;
+	margin:0px;
+}
+
+nav ul{
+	padding:0px;
+	margin:0px;
+}
+
+nav ul a {
+	text-decoration: none;
+	color: black;
+}
+nav ul a:visited {
+	color: black;
+}
+
+nav li{
+	    border:1px solid #333333;
+	    border-radius: 3px;
+	list-style-type: none;
+	float:left;
+	padding: 5px 20px;
+	margin:3px 2px 0px 0px;
+	background: #d1ffd1;
+	vertical-align:middle;
+}
+
+nav li:hover{
+	color:#008800;
+	background: #a8ffa8;
+}
+
+.title{
+	font-size: 35px;
+//	text-shadow: 2px 2px 5px #555555;
+	color: black;
+	margin-right: 15px;
+}
+.subtitle{
+	font-size: 15px;
+	font-style: italic;
+	color: #2f4f4f;
+}
+
+section{
+	width: 800px;
+	padding:0px 20px 20px 20px;
+}
+
+footer {
+	width: 800px;
+	padding: 10px 20px;
+	text-align: center;
+	margin: 10px auto;
+	background: #e3e5e0;
+}
+
+h1 {
+	font-size: 130%;
+}
+
+article p {
+	margin: 1em 0em 2em 0em;
+}
+
+.code {
+	font-family: Courier;
+}
+
+hr {
+	margin: 2em 0em 0.5em 0em;
+}
+
+em {	font-weight: bold; font-style: normal;}
+
+h3 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22288705-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<header>
+<span class='title'>Help</span><span class='subtitle'>Article Locator for Chemistry</span>
+</header>
+<nav>
+<ul>
+<a href='#about'><li>About</li></a>
+<a href='#publishers'><li>Supported Publishers</li></a>
+<a href='#params'><li>Parameters</li></a>
+<a href='#history'><li>History</li></a>
+<a href='#copyright'><li>Copyright</li></a>
+<a href='#contact'><li>Contact</li></a>
+</ul>
+</nav>
+<section>
+<article id='about'>
+<h1>About</h1>
+This website locates an article by a citation and redirects you to the online journal in chemistry (and some of biology and physics). It works completely on a client side by JavaScript. You can also download the files and run it in your local folder (<a href='articlelocator0.7.zip'>Download a zip file</a>).
+</article><article id='publishers'>
+<h1>Supported Publishers</h1>
+<p>
+The list of supported journals is <a href='./alltitles.html'>here</a>.
+<ul>
+	<li>American Chemical Society</li>
+	<li>Wiley</li>
+	<li>Elsevier</li>
+	<li>Nature Publishing Group</li>
+	<li>American Physical Society</li>
+	<li>Springer</li>
+	<li>Annual Reviews</li>
+	<li>PLoS</li>
+	<li>Cell Press</li>
+	<li>American Institute of Physics</li>
+	<li>Some other journals</li>
+</ul>
+</p><p>Since I haven't tested each individual journal, there is no guarantee that all journals of these publishers are correctly supported.</p>
+
+</article><article id='params'>
+<h1>Parameters</h1>
+You can specify parameters like this:<br />
+<span class='code'>http://locator.web.fc2.com/index.html?q=J. Am. Chem. Soc., 2011, 133, 4172–4174&redirect=yes</span>
+<dl>
+	<dt class='code'>q=[citation text]</dt>
+		<dd>Specify a citation text</dd>
+	<dt class='code'>redirect=[yes/no]</dt>
+		<dd>Redirects you to the online journal immediately. (Default: no)</dd>
+</dl>
+Using these parameters, you can directly jump to the online journal from the address bar in your browser (<a href='http://www.google.com/support/forum/p/Chrome/thread?tid=7a98ed4ae13586c2&hl=en'>Chrome</a>, <a href='http://kb.mozillazine.org/Using_keyword_searches'>Firefox</a>, <a href='http://mackindergarten.com/2008/03/03/safaristand-add-a-bunch-of-features-to-safari/'>Safari</a>).
+
+</article><article id='history'>
+<h1>Update History</h1>
+<h3>10/16/11</h3>
+<ul>
+	<li>More journals are supported (AIP journals, etc.)</li>
+	<li>Twitter link was introduced.</li>
+	<li>Some bugs were fixed.</li>
+</ul>
+<h3>7/25/11</h3>
+<ul>
+	<li>More publishers are supported (PLoS, Chemical Society of Japan, and Cell Press)</li>
+	<li>Support for RSC journal articles without a volume number (e.g. "J. Chem. Soc., Chem. Commun., 1979, 866-867") was added.</li>
+	<li>Improvement was made in ambiguous search on a journal title.</li>
+	<li>An error report form was introduced.</li>
+</ul>
+<h3>5/14/11</h3>
+<ul>
+	<li>Support for Elsevier journals was added.</li>
+</ul>
+<h3>3/25/11</h3>
+<ul>
+	<li>Site opened.</li>
+</ul>
+</article><article id='copyright'>
+<h1>Copyright & License</h1>
+The author (L.P.) holds the copyright of the program on this website. The program on this website is provided under BSD license (FreeBSD license). (See <a href='license.html'>license</a>.)
+
+</article><article id='contact'>
+<h1>Contact</h1>
+If you have any suggestions or comments on this website including the journals you'd like me to support, please write me at <a href='mailto:fullereneC84@gmail.com'>fullereneC84@gmail.com</a> or <a href='http://twitter.com/#!/articlelocator/'>@articlelocator</a> on Twitter.
+</article>
+</section>
+<footer>
+<address>Created: 3/25/2011. Modified: 10/16	/2011. Copyright (C) 2011 L.P. All Rights Reserved.</address>
+</footer>
+</body>
+</html>

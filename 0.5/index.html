@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!-- Article Locator ver. 0.5-->
+<!-- Copyright (C) 2011 L.P. All Rights Reserved. The program on this website is distributed under BSD license.-->
+
+<head>
+<title>Article Locator for Chemistry</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+
+<script type="text/javascript" src="./js/suggest.js"></script>
+
+<script type="text/javascript" src="./js/main.js"></script>
+
+<script type="text/javascript" src="./js/acs.js"></script>
+<script type="text/javascript" src="./js/rsc.js"></script>
+<script type="text/javascript" src="./js/wiley.js"></script>
+<script type="text/javascript" src="./js/npg.js"></script>
+<script type="text/javascript" src="./js/elsevier.js"></script>
+<script type="text/javascript" src="./js/aps.js"></script>
+<script type="text/javascript" src="./js/annurev.js"></script>
+<script type="text/javascript" src="./js/springer.js"></script>
+<script type="text/javascript" src="./js/other.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22288705-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body onload="initial()">
+<p><img src='./logo.png' width='301' height='47' class='logo'/></p>
+<p class='header'><a href='./alltitles.html'>Supported Journals</a>&nbsp; / &nbsp;<a href='./help.html'>Help</a></p>
+<div id='textsearch'>
+	<h2>Citation Text</h2>
+	<div style='margin: 0em 3em 0em 0em'>
+		<input type="text" id="freeword"  onkeydown='if (event.keyCode == 13){goFreeWord();}'/><br />
+		<div style='text-align:right; margin: 0.5em 0em 0em 0em'>
+			<input type="button" class='bigbutton' value="Parse" onclick="parseFreeWord()" />
+			<input type="button" class='bigbutton' value="Parse and Go" onclick="goFreeWord()" />
+		</div>
+	</div>
+	<div style='margin:0em 0em 0em 2em'>e.g.)
+	<p style='margin:0.3em'>Chem. Rev. 1995, 95, 2457. </p>
+	<p style='margin:0.3em'>Science 306 (5696): 666</p>
+	</div>
+	<div id="out_parse_info">&nbsp;<br /></div>
+</div>  <!--  id='textsearch' -->
+
+<div style='float:left;'>
+	<img src='arrow.png' width='85px' height='70px' style='margin: 3em 0em 0em 0em'/><br />
+	&nbsp; Parse
+</div>
+
+<div id='autofillsearch'>
+<form onsubmit="return false;" action=''>
+	<h2>Input using suggestion</h2>
+	<div style='margin: 0em 3em 0em 0em'>
+		<div>Journal: &nbsp;
+			<!-- Input form -->
+			<input id="suggesttext" type="text" name="pattern" value="" autocomplete="off" style="display: block" />
+			<!-- Area to show suggestion -->
+			<div id="suggest"></div>
+		</div>
+		<p>
+			<span style='display:inline-block;'>Volume: &nbsp;<input type="text" id="suggestvol"/>&nbsp; &nbsp; &nbsp; </span>
+			<span style='display:inline-block;'>Page: &nbsp;&nbsp;<input type="text" id="suggestpage"/></span>
+			<span style='float:right'><input type="submit" value="Go" class='bigbutton' id="suggestgo" onclick="jumpToCitation()"/></span>
+		</p>
+		<div style='margin: 1em 2em;'><input type="checkbox" name="search_ambiguous" id='check_amb' checked /><label for='check_amb'>Ambiguous search on journal title</label><br /></div>
+	</div><br />
+	<div id="out_info">&nbsp;<br /></div>
+</form>
+</div>  <!--  id='autofillsearch' -->
+
+<div style="text-align:center; margin: 1em ">
+<iframe src="http://www.facebook.com/plugins/like.php?app_id=216169511746572&amp;href=http%3A%2F%2Flocator.web.fc2.com%2Findex.html&amp;send=false&amp;layout=standard&amp;width=300&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:30px;" allowTransparency="true"></iframe>
+</div><br />
+
+<div style='text-align:center; margin: 0em 0em 1em 0em'>
+<!-- FC2 counter begin-->
+<script language="JavaScript" type="text/javascript" src="http://counter1.fc2.com/counter.php?id=8415996"></script><noscript><img src="http://counter1.fc2.com/counter_img.php?id=8415996"></noscript>
+<!-- FC2 counter end-->
+</div>
+</body>
+
+</html>
+
