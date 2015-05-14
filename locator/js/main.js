@@ -146,23 +146,29 @@ function submitReport(status) {
   var citation = byid('freeword').value;
   var journal = byid('suggesttext').value;
 
+  try{
+
   switch(status){
     case statusSuccess:
-      ret = _gaq.push(['_trackEvent', 'Search', 'Success', citation]);
-      ret = _gaq.push(['_trackEvent', 'Supported', 'Journal', journal]);
+      ret = ga('send', 'event', 'Search', 'Success', citation);
+      ret = ga('send', 'event', 'Supported', 'Journal', journal);
       break;
     case statusNotSupported:
-      ret = _gaq.push(['_trackEvent', 'Search', 'NotSupported', citation]);
-      ret = _gaq.push(['_trackEvent', 'NotSupported', 'Journal', journal]);
+      ret = ga('send', 'event', 'Search', 'NotSupported', citation);
+      ret = ga('send', 'event', 'NotSupported', 'Journal', journal);
       break;
     case statusNoRegexMatch:
-      ret = _gaq.push(['_trackEvent', 'Search', 'NoRegexpMatch', citation]);
+      ret = ga('send', 'event', 'Search', 'NoRegexpMatch', citation);
       break;
     default:
-      ret = _gaq.push(['_trackEvent', 'Search', 'UnknownStatus', citation]);
+      ret = ga('send', 'event', 'Search', 'UnknownStatus', citation);
       break;
   }
   return ret;
+  }catch(e){
+    console.error(e);
+    return undefined;
+  }
 }
 
 
