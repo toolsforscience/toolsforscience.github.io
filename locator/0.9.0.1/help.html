@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Article Locator ver. 0.9-->
+  <!-- Copyright (C) 2011 Hiroyuki Kai All Rights Reserved. The program on this website is distributed under BSD license.-->
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Help - Article Locator</title>
+    <style type="text/css">
+      body {
+        margin: 20px auto;
+        width: 800px;
+        font-family: sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      header,
+      footer {
+        border: 1px solid #ccc;
+        margin: 0px;
+        padding: 20px;
+        border-radius: 4px;
+      }
+
+      section {
+        border: 1px solid #ccc;
+        margin: 0px;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      header {
+        width: 800px;
+        background: #cce2ff;
+      }
+
+      nav {
+        /* border:1px solid #ccc; */
+        width: 800px;
+        height: 40px;
+        padding: 10px 0px;
+        margin: 0px;
+      }
+
+      nav ul {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      nav ul a {
+        text-decoration: none;
+        color: black;
+      }
+      nav ul a:visited {
+        color: black;
+      }
+
+      nav li {
+        border: 1px solid #006eff;
+        border-radius: 3px;
+        list-style-type: none;
+        float: left;
+        padding: 5px 20px;
+        margin: 3px 2px 0px 0px;
+        background: #cce2ff;
+        vertical-align: middle;
+      }
+
+      nav li:hover {
+        color: #0f1e33;
+        background: #4c99ff;
+      }
+
+      .title {
+        font-size: 35px;
+        /* text-shadow: 2px 2px 5px #555555; */
+        color: black;
+        margin-right: 15px;
+      }
+      .subtitle {
+        font-size: 15px;
+        font-style: italic;
+        color: #2f4f4f;
+      }
+
+      section {
+        width: 800px;
+        padding: 0px 20px 20px 20px;
+      }
+
+      footer {
+        width: 800px;
+        padding: 10px 20px;
+        text-align: center;
+        margin: 10px auto;
+        background: #e3e5e0;
+      }
+
+      h1 {
+        font-size: 130%;
+      }
+
+      article p {
+        margin: 1em 0em 2em 0em;
+      }
+
+      .code {
+        font-family: Courier;
+      }
+
+      hr {
+        margin: 2em 0em 0.5em 0em;
+      }
+
+      em {
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      h3 {
+        font-size: 100%;
+        font-weight: normal;
+      }
+
+      #banners img {
+        margin: 10px;
+      }
+    </style>
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        (i[r] =
+          i[r] ||
+          function () {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      );
+
+      ga("create", "UA-62861419-1", "auto");
+      ga("send", "pageview");
+    </script>
+  </head>
+  <body>
+    <header>
+      <span class="title">Help</span
+      ><span class="subtitle">Article Locator for Chemistry</span>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#publishers">Supported Publishers</a></li>
+        <li><a href="#params">Parameters</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#sourcecode">Source Code</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section>
+      <article id="about">
+        <h1>About</h1>
+        This website locates an article by a citation and redirects you to the
+        online journal in chemistry, biology, and physics.
+      </article>
+      <article id="publishers">
+        <h1>Supported Publishers</h1>
+        The list of supported journals is <a href="./alltitles.html">here</a>.
+        <ul>
+          <li>American Chemical Society</li>
+          <li>Wiley</li>
+          <li>Elsevier</li>
+          <li>Nature Publishing Group</li>
+          <li>American Physical Society</li>
+          <li>Springer</li>
+          <li>Annual Reviews</li>
+          <li>PLoS</li>
+          <li>IOP Science</li>
+          <li>Cell Press</li>
+          <li>American Institute of Physics</li>
+          <li>Some other journals</li>
+        </ul>
+      </article>
+
+      <article id="params">
+        <h1>Parameters</h1>
+        You can specify parameters like this:<br />
+        <span class="code"
+          >http://locator.web.fc2.com/index.html?q=J. Am. Chem. Soc., 2011, 133,
+          4172–4174&redirect=yes</span
+        >
+        <dl>
+          <dt class="code">q=[citation text]</dt>
+          <dd>Specify a citation text</dd>
+          <dt class="code">redirect=[yes/no]</dt>
+          <dd>
+            Redirects you to the online journal immediately. (Default: no)
+          </dd>
+        </dl>
+        Using these parameters, you can directly jump to the online journal from
+        the address bar in your browser (<a
+          href="http://www.google.com/support/forum/p/Chrome/thread?tid=7a98ed4ae13586c2&hl=en"
+          >Chrome</a
+        >,
+        <a href="http://kb.mozillazine.org/Using_keyword_searches">Firefox</a>,
+        <a
+          href="http://mackindergarten.com/2008/03/03/safaristand-add-a-bunch-of-features-to-safari/"
+          >Safari</a
+        >).
+      </article>
+      <article id="history">
+        <h1>Update History</h1>
+        <h3>11/4/12</h3>
+        <ul>
+          <li>
+            User interface was refined. Parsing gets done automatically when the
+            citation is entered.
+          </li>
+        </ul>
+        <h3>3/4/12</h3>
+        <ul>
+          <li>User interface was refined.</li>
+          <li>
+            The site is moved to http://<span style="color: red">a</span
+            >locator.web.fc2.com/
+          </li>
+          <li>Support for IOP Sicience was addded.</li>
+        </ul>
+        <h3>10/16/11</h3>
+        <ul>
+          <li>More journals are supported (AIP journals, etc.)</li>
+          <li>Twitter link was introduced.</li>
+          <li>Some bugs were fixed.</li>
+        </ul>
+        <h3>7/25/11</h3>
+        <ul>
+          <li>
+            More publishers are supported (PLoS, Chemical Society of Japan, and
+            Cell Press)
+          </li>
+          <li>
+            Support for RSC journal articles without a volume number (e.g. "J.
+            Chem. Soc., Chem. Commun., 1979, 866-867") was added.
+          </li>
+          <li>Improvement was made in ambiguous search on a journal title.</li>
+          <li>An error report form was introduced.</li>
+        </ul>
+        <h3>5/14/11</h3>
+        <ul>
+          <li>Support for Elsevier journals was added.</li>
+        </ul>
+        <h3>3/25/11</h3>
+        <ul>
+          <li>Site opened.</li>
+        </ul>
+      </article>
+      <article id="sourcecode">
+        <h1>Source Code</h1>
+        <p>
+          Source code is hosted on
+          <a href="https://github.com/hirokai/ArticleLocator">Github</a>.
+        </p>
+        <p>
+          The author (Hiroyuki Kai) holds the copyright of the program on this
+          website. The program on this website is provided under BSD license
+          (FreeBSD license). (See <a href="license.html">license</a>.)
+        </p>
+        <p>When you link to this website, you may use banner images below.</p>
+        <div id="banners">
+          <img src="img/banner1.png" alt="banner1" />
+          <img src="img/banner2.png" alt="banner2" />
+          <img src="img/banner3.png" alt="banner3" />
+        </div>
+      </article>
+      <article id="contact">
+        <h1>Contact</h1>
+        If you have any suggestions or comments on this website including the
+        journals you'd like me to support, please write me (Hiroyuki Kai) at
+        <a
+          href="mailto:fullereneC84@gmail.com"
+          onClick="_gaq.push(['_trackEvent', 'ExtLink', 'Mail', 'fullereneC84@gmail.com']);"
+          >fullereneC84@gmail.com</a
+        >
+        or
+        <a
+          href="http://twitter.com/#!/articlelocator/"
+          onClick="_gaq.push(['_trackEvent', 'ExtLink', 'Twitter', 'http://twitter.com/#!/articlelocator/']);"
+          >@articlelocator</a
+        >
+        on Twitter.
+      </article>
+    </section>
+    <footer>
+      <address>
+        Created: 3/25/2011. Modified: 3/4/2012. Copyright (C) 2011-12 Hiroyuki
+        Kai All Rights Reserved.
+      </address>
+    </footer>
+  </body>
+</html>
