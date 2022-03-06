@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Svelte demo app" />
+		<link rel="icon" href="/locator/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>About</title>
+	<link rel="stylesheet" href="/locator/internal/assets/pages/__layout.svelte-38a25d5d.css">
+	<link rel="stylesheet" href="/locator/internal/assets/pages/about.svelte-e97c7c4d.css">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<main class="svelte-xt8mur">
+<header class="svelte-rispgz"><span class="title svelte-rispgz">Help</span><span class="subtitle svelte-rispgz">Article Locator for Chemistry</span></header>
+<nav class="svelte-rispgz"><ul class="svelte-rispgz"><li class="svelte-rispgz"><a href="#about" class="svelte-rispgz">About</a></li>
+		<li class="svelte-rispgz"><a href="#publishers" class="svelte-rispgz">Supported Publishers</a></li>
+		<li class="svelte-rispgz"><a href="#params" class="svelte-rispgz">Parameters</a></li>
+		<li class="svelte-rispgz"><a href="#history" class="svelte-rispgz">History</a></li>
+		<li class="svelte-rispgz"><a href="#sourcecode" class="svelte-rispgz">Source Code</a></li>
+		<li class="svelte-rispgz"><a href="#contact" class="svelte-rispgz">Contact</a></li></ul></nav>
+<section class="svelte-rispgz"><article id="about"><h1 class="svelte-rispgz">About</h1>
+		This website locates an article by a citation and redirects you to the online journal in chemistry,
+		biology, and physics.
+	</article>
+	<article id="publishers"><h1 class="svelte-rispgz">Supported Publishers</h1>
+		The list of supported journals is <a href="./all_titles">here</a>.
+	</article>
+
+	<article id="params"><h1 class="svelte-rispgz">Parameters</h1>
+		You can specify parameters like this:<br>
+		<span class="code svelte-rispgz">https://toolsforscience.github.io/locator/?q=J. Am. Chem. Soc., 2011, 133,
+			4172–4174&amp;redirect=yes</span>
+		<dl><dt class="code svelte-rispgz">q=[citation text]</dt><dd>Specify a citation text</dd><dt class="code svelte-rispgz">redirect=[yes/no]</dt><dd>Redirects you to the online journal immediately. (Default: no)</dd></dl>
+		Using these parameters, you can directly jump to the online journal from the address bar in your
+		browser (<a href="http://www.google.com/support/forum/p/Chrome/thread?tid=7a98ed4ae13586c2&hl=en">Chrome</a>,
+		<a href="http://kb.mozillazine.org/Using_keyword_searches">Firefox</a>,
+		<a href="http://mackindergarten.com/2008/03/03/safaristand-add-a-bunch-of-features-to-safari/">Safari</a>).
+	</article>
+	<article id="history"><h1 class="svelte-rispgz">Update History</h1>
+		<h3 class="svelte-rispgz">3/2/2022</h3>
+		<ul><li>Search was updated to the latest versions of the publishers&#39; websites.</li>
+			<li>Journal lists of ACS, AIP, IOP, RSC, and NPG were updated.</li>
+			<li>Unfortunately, Cell Press, Springer, AAAS, and Annual Reviews appear to have changed search
+				functionalities, which prohibits the citation search from Article Locator. In addition,
+				Elsevier, Wiley, and APS no longer allow search from an external site. Their supports are
+				now removed from Article Locator.
+			</li>
+			<li>The site was rewritten as a modern web application using TypeScript and Svelte.</li></ul>
+		<h3 class="svelte-rispgz">11/4/2012</h3>
+		<ul><li>User interface was refined. Parsing gets done automatically when the citation is entered.
+			</li></ul>
+		<h3 class="svelte-rispgz">3/4/2012</h3>
+		<ul><li>User interface was refined.</li>
+			<li>The site is moved to http://<span style="color: red">a</span>locator.web.fc2.com/
+			</li>
+			<li>Support for IOP Sicience was addded.</li></ul>
+		<h3 class="svelte-rispgz">10/16/2011</h3>
+		<ul><li>More journals are supported (AIP journals, etc.)</li>
+			<li>Twitter link was introduced.</li>
+			<li>Some bugs were fixed.</li></ul>
+		<h3 class="svelte-rispgz">7/25/2011</h3>
+		<ul><li>More publishers are supported (PLoS, Chemical Society of Japan, and Cell Press)</li>
+			<li>Support for RSC journal articles without a volume number (e.g. &quot;J. Chem. Soc., Chem.
+				Commun., 1979, 866-867&quot;) was added.
+			</li>
+			<li>Improvement was made in ambiguous search on a journal title.</li>
+			<li>An error report form was introduced.</li></ul>
+		<h3 class="svelte-rispgz">5/14/2011</h3>
+		<ul><li>Support for Elsevier journals was added.</li></ul>
+		<h3 class="svelte-rispgz">3/25/2011</h3>
+		<ul><li>Site opened.</li></ul></article>
+	<article id="sourcecode" class="svelte-rispgz"><h1 class="svelte-rispgz">Source Code</h1>
+		<p class="svelte-rispgz">Source code is hosted on
+			<a href="https://github.com/hirokai/ArticleLocator">Github</a>.
+		</p>
+		<p class="svelte-rispgz">The author (Hiroyuki Kai) holds the copyright of the program on this website. The program on
+			this website is provided under MIT license.
+		</p>
+		<p class="svelte-rispgz">When you link to this website, you may use banner images below.</p>
+		<div id="banners" class="svelte-rispgz"><img src="img/banner1.png" alt="banner1" class="svelte-rispgz">
+			<img src="img/banner2.png" alt="banner2" class="svelte-rispgz">
+			<img src="img/banner3.png" alt="banner3" class="svelte-rispgz"></div></article>
+	<article id="contact"><h1 class="svelte-rispgz">Contact</h1>
+		If you have any suggestions or comments on this website including the journals you&#39;d like me to support,
+		please write me (Hiroyuki Kai) at
+		<a href="mailto:fullereneC84@gmail.com">fullereneC84@gmail.com</a></article></section>
+<footer class="svelte-rispgz"><address>Created: 3/25/2011. Modified: 3/1/2022. Copyright (C) 2011-22 Hiroyuki Kai All Rights Reserved.
+	</address>
+</footer></main>
+
+<footer class="svelte-xt8mur">
+</footer>
+
+</div>
+	</body>
+</html>

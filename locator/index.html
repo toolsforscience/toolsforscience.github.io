@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Svelte demo app" />
+		<link rel="icon" href="/locator/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Article Locator</title><script src="https://code.jquery.com/jquery.min.js" data-svelte="svelte-1fba7hf"></script><script src="/typeahead.bundle.min.js" data-svelte="svelte-1fba7hf"></script><script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js" data-svelte="svelte-1fba7hf"></script><meta charset="utf-8" data-svelte="svelte-1fba7hf"><meta name="description" content="Article Locator finds online journal articles by a citation. It covers more than 1,000 journals in chemistry, physics, and biology" data-svelte="svelte-1fba7hf"><meta name="keywords" content="article search,citation" data-svelte="svelte-1fba7hf"><link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet" data-svelte="svelte-1fba7hf">
+	<link rel="stylesheet" href="/locator/internal/assets/pages/__layout.svelte-38a25d5d.css">
+	<link rel="stylesheet" href="/locator/internal/assets/pages/index.svelte-188ec514.css">
+	<link rel="modulepreload" href="/locator/internal/start-1bc815a3.js">
+	<link rel="modulepreload" href="/locator/internal/chunks/vendor-35ab7f17.js">
+	<link rel="modulepreload" href="/locator/internal/pages/__layout.svelte-8df66f18.js">
+	<link rel="modulepreload" href="/locator/internal/pages/index.svelte-6fc4676b.js">
+	<link rel="modulepreload" href="/locator/internal/chunks/index-d53300ad.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<main class="svelte-xt8mur">
+<div class="container"><div class="page-header"><h1>Article Locator <small>Chemistry, Physics, Biology</small></h1></div>
+	<div class="row"><div class="span2 term svelte-10hbcnd">Citation</div>
+		<div class="span8"><input type="text" class="span8 svelte-10hbcnd" id="article-locator-freeword" placeholder="Paste citation, and hit Enter.  Shift + Enter for a new window or tab." tabindex="1"></div></div>
+	<div class="row"><hr>
+		<div class="span4 offset4" style="text-align: center; margin-bottom: 8px">Or type a journal title, volume, and page.
+		</div></div>
+	<div class="row"><div class="span2 term svelte-10hbcnd">Journal</div>
+		<div class="span8"><input id="journal-title" class="span8" type="text" data-provide="typeahead" name="pattern" tabindex="2" value="" autocomplete="off"></div></div>
+	<div class="row"><div class="span2 term svelte-10hbcnd">Volume</div>
+		<div class="span1 svelte-10hbcnd"><input type="text" id="suggestvol" tabindex="3" class="svelte-10hbcnd"></div>
+		<div class="span1 term svelte-10hbcnd">Issue</div>
+		<div class="span1 svelte-10hbcnd"><input type="text" id="suggestissue" tabindex="4" class="svelte-10hbcnd"></div>
+		<div class="span1 term svelte-10hbcnd">Page</div>
+		<div class="span1 svelte-10hbcnd"><input type="text" id="suggestpage" tabindex="5" class="svelte-10hbcnd"></div>
+		<div class="span3"><span style="float: right"><input type="button" class="btn btn-primary" value="Go" tabindex="-1" id="suggestgo"></span></div></div>
+	<div class="row"><div class="span3"></div>
+		<div class="info span9 svelte-10hbcnd" id="out_info"> <br></div></div>
+
+	<div class="row" style="margin-top: 50px"><div class="span4 offset4" style="text-align: center"><a sveltekit:prefetch href="/locator/about">Help</a> /
+			<a sveltekit:prefetch href="/locator/all_titles">Supported journals</a></div></div>
+	<div class="row" id="socialbookmarks"><div class="span4 offset4" style="text-align: center; margin-top: 20px"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://toolsforscience.github.io/locator/" data-text="Article Locator" data-via="articlelocator">Tweet</a>
+			<script>!(function (d, s, id) {
+					var js,
+						fjs = d.getElementsByTagName(s)[0],
+						p = /^http:/.test(d.location) ? "http" : "https"
+					if (!d.getElementById(id)) {
+						js = d.createElement(s)
+						js.id = id
+						js.src = p + "://platform.twitter.com/widgets.js"
+						fjs.parentNode.insertBefore(js, fjs)
+					}
+				})(document, "script", "twitter-wjs")
+			</script>
+			<br>
+			<iframe src="https://www.facebook.com/plugins/like.php?app_id=216169511746572&href=http%3A%2F%2Flocator.web.fc2.com&send=false&layout=standard&width=300&show_faces=true&action=recommend&colorscheme=light&font&height=80" scrolling="no" title="FB" frameborder="0" style="border: none; overflow: hidden; width: 300px; height: 30px" allowtransparency="true"></iframe><br>
+			<g:plusone size="small" annotation="inline" width="120"></g:plusone></div></div>
+</div></main>
+
+<footer class="svelte-xt8mur">
+</footer>
+
+
+		<script type="module" data-hydrate="133u8rk">
+		import { start } from "/locator/internal/start-1bc815a3.js";
+		start({
+			target: document.querySelector('[data-hydrate="133u8rk"]').parentNode,
+			paths: {"base":"/locator","assets":"/locator"},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/locator/internal/pages/__layout.svelte-8df66f18.js"),
+						import("/locator/internal/pages/index.svelte-6fc4676b.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
